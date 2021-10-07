@@ -1,0 +1,50 @@
+ {% extends "base.html" %}
+
+{% load static %}
+
+{% block  title%}
+
+
+My site
+{% endblock  %}
+
+
+{% block  css_file%}
+<link rel="stylesheet" href="{% static "blog/post.css"%}">
+<link rel="stylesheet" href="{% static "blog/index.css"%}">
+
+{% endblock  %}
+
+{% block content %}
+
+
+<section id="welcome">
+<header>
+    <img src="{% static 'blog/images/jas.jpg' %}" alt="Jasmine The author of the blog"/>
+    <h2>Jasmine</h2>
+</header>
+
+<p>Hi I am jas and I love to blog about the tech and stuff</p>
+</section>
+
+<section id="latest-posts">
+    <h2>Latest thoughts</h2>
+    <ul>
+    <div>
+    {% for post in posts%}
+        {% include "blog/includes/post.html" %}
+    {% endfor %}   
+    </div>
+    </ul>
+
+
+</section>
+
+
+<section id="about">
+    <h2>What I do</h2>
+    <p>I love learning new technologies and programming</p>
+    <p>My goal is to keep on growing as a developer</p>
+</section>
+
+{% endblock  %}
