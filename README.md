@@ -1,2 +1,4 @@
 # personal-blog
-personal blog websitec
+Personal blog website using django
+Can add posts and descriptions through admin
+Comment form for feedback
